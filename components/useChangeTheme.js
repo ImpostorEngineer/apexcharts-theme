@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export function useChangeTheme() {
-  const [activeTheme, setActiveTheme] = useState('light');
+  const [activeTheme, setActiveTheme] = useState('dark');
   const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light';
 
   useEffect(() => {

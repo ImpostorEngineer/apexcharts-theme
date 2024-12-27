@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
-import { useChangeTheme } from './changeTheme';
+import { useChangeTheme } from './useChangeTheme';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useChangeTheme();
@@ -11,17 +10,11 @@ export default function Navbar() {
     '/': {
       name: 'Home',
     },
-    '/conference': {
-      name: '2025 Conference',
+    '/chart': {
+      name: 'Chart',
     },
-    '/committee': {
-      name: 'Organizing Committee',
-    },
-    '/past': {
-      name: 'Past Conferences',
-    },
-    '/location': {
-      name: 'Location',
+    '/about': {
+      name: 'About',
     },
   };
 

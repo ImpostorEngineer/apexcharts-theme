@@ -1,10 +1,10 @@
-import Footer from '@/components/footer';
 import './globals.css';
+import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 
 export const metadata = {
-  title: 'North Country Cybersecurity Conference',
-  description: 'North Country Cybersecurity Conference',
+  title: 'ApexCharts testing',
+  description: 'ApexCharts testing',
 };
 
 export default function RootLayout({ children }) {
