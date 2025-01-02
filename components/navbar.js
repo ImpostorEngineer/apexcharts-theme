@@ -7,7 +7,7 @@ import { useTheme } from '../app/context/ThemeContext';
 export default function Navbar() {
   // const { theme, toggleTheme } = useChangeTheme();
   const { theme, toggleTheme } = useTheme();
-  console.log(theme);
+  console.log(theme, 'navbar');
 
   const navItems = {
     '/': {

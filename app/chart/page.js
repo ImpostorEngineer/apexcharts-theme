@@ -8,6 +8,7 @@ import { useTheme } from '../context/ThemeContext';
 
 export default function Dashboard({}) {
   const { theme } = useTheme();
+  console.log(theme, 'this is dashboard');
 
   let [chartState, setChartState] = useState({
     options: {
@@ -70,7 +71,7 @@ export default function Dashboard({}) {
   useEffect(() => {
     setChartState((prev) => {
       prev.options.theme.mode = theme;
-      console.log(prev.options.theme.mode);
+      console.log(prev.options.theme.mode, 'this is chart');
       return prev;
     });
   }, [theme]);

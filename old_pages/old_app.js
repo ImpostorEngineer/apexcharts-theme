@@ -1,11 +1,10 @@
 import React from 'react';
 import { ThemeProvider } from './ThemeContext';
-import YourComponent from './YourComponent';
 
-const App = () => {
+const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider>
-      <YourComponent />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 };
