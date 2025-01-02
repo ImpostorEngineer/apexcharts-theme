@@ -1,16 +1,13 @@
 'use client';
-// import CreateChart from '@/components/apexcharts';
-import { useChangeTheme } from '@/components/useChangeTheme';
+// import { useChangeTheme } from '@/components/useChangeTheme';
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-export default function Dashboard() {
-  const { theme } = useChangeTheme();
-  console.log(theme);
+import { useTheme } from '../context/ThemeContext';
 
-  // const [theme, setTheme] = useState('light');
-  // const inactiveTheme = theme === 'light' ? 'dark' : 'light';
+export default function Dashboard({}) {
+  const { theme } = useTheme();
 
   let [chartState, setChartState] = useState({
     options: {

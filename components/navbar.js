@@ -1,10 +1,13 @@
 'use client';
-
+import React, { useContext } from 'react';
+// import { useChangeTheme } from './useChangeTheme';
 import Link from 'next/link';
-import { useChangeTheme } from './useChangeTheme';
+import { useTheme } from '../app/context/ThemeContext';
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useChangeTheme();
+  // const { theme, toggleTheme } = useChangeTheme();
+  const { theme, toggleTheme } = useTheme();
+  console.log(theme);
 
   const navItems = {
     '/': {

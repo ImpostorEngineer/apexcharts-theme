@@ -1,4 +1,5 @@
 import './globals.css';
+import { ThemeProvider } from './context/ThemeContext';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 
@@ -11,9 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`container mx-auto px-4 py-4`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
