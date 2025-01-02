@@ -63,15 +63,10 @@ export default function Dashboard({}) {
     },
   ];
 
-  // const toggleTheme = () => {
-  //   setTheme(inactiveTheme);
-  //   console.log('hello', chartState.options.theme.mode);
-  // };
-
   useEffect(() => {
     setChartState((prev) => {
-      prev.options.theme.mode = theme;
-      console.log(prev.options.theme.mode, 'this is chart');
+      console.log(theme, 'this is chart');
+      prev.options.theme.mode = theme === 'light' ? 'light' : 'dark';
       return prev;
     });
   }, [theme]);
@@ -80,9 +75,6 @@ export default function Dashboard({}) {
 
   return (
     <div>
-      {/* <button onClick={toggleTheme} className='p-2 bg-blue-500 text-white rounded-md'>
-        Theme
-      </button> */}
       <div className='flex flex-col items-center justify-center py-5'>
         <Chart
           options={chartState.options}
