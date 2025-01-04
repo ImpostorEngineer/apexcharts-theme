@@ -2,11 +2,10 @@
 // import { useChangeTheme } from '@/components/useChangeTheme';
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-
 import { useTheme } from '../context/ThemeContext';
 
 export default function Dashboard({}) {
+  const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
   const { theme } = useTheme();
   console.log(theme, 'this is dashboard');
 
